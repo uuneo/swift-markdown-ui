@@ -6,7 +6,7 @@ public struct DefaultInlineImageProvider: InlineImageProvider {
   public func image(with url: URL, label: String) async throws -> Image {
     try await Image(
       DefaultNetworkImageLoader.shared.image(from: url),
-      scale: 1,
+      scale: 0.3,
       label: Text(label)
     ).resizable()
   }
