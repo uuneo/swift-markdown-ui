@@ -18,8 +18,8 @@ struct ImageView: View {
         content: .init(block: self.content)
       )
     )
-    .scaledToFit()
-    .frame(width: 100)
+    .aspectRatio(contentMode: .fit)
+    .frame(width: 100, height: 100)
   }
 
   private var label: some View {
