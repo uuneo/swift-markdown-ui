@@ -23,8 +23,6 @@ struct ImageView: View {
 
   private var label: some View {
     self.imageProvider.makeImage(url: self.url)
-          .scaledToFit()
-          .frame(width: 200)
       .link(destination: self.data.destination)
       .accessibilityLabel(self.data.alt)
   }

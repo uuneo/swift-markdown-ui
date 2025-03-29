@@ -8,7 +8,7 @@ public struct DefaultInlineImageProvider: InlineImageProvider {
       DefaultNetworkImageLoader.shared.image(from: url),
       scale: 1,
       label: Text(label)
-    )
+    ).resizable()
   }
 }
 
