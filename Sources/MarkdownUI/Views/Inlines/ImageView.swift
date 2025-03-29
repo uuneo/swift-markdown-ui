@@ -17,11 +17,14 @@ struct ImageView: View {
         label: .init(self.label),
         content: .init(block: self.content)
       )
+      
     )
   }
 
   private var label: some View {
     self.imageProvider.makeImage(url: self.url)
+          .scaledToFit()
+          .frame(width: 200)
       .link(destination: self.data.destination)
       .accessibilityLabel(self.data.alt)
   }
