@@ -17,8 +17,9 @@ struct ImageView: View {
         label: .init(self.label),
         content: .init(block: self.content)
       )
-      
     )
+    .scaledToFit()
+    .frame(width: 100)
   }
 
   private var label: some View {
