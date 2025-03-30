@@ -18,6 +18,8 @@ struct ImageFlow: View {
           switch item.value {
           case .image(let data):
             ImageView(data: data)
+                  .scaledToFit()
+                  .frame(width: 100)
           case .lineBreak:
             Spacer()
           }
