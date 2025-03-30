@@ -12,7 +12,7 @@ public struct FontProperties: Hashable {
   }
 
   /// The font family variant.
-  public enum FamilyVariant: Hashable {
+  public enum FamilyVariant: Hashable, Sendable {
     /// No variant. Use the current font family.
     case normal
 

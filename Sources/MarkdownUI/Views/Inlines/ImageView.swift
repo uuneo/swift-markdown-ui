@@ -18,14 +18,16 @@ struct ImageView: View {
         content: .init(block: self.content)
       )
     )
-    .aspectRatio(contentMode: .fit)
-    .frame(width: 100, height: 100)
+    
+    
   }
 
   private var label: some View {
     self.imageProvider.makeImage(url: self.url)
       .link(destination: self.data.destination)
       .accessibilityLabel(self.data.alt)
+      .scaledToFit()
+      .frame(width: 150)
   }
 
   private var content: BlockNode {
