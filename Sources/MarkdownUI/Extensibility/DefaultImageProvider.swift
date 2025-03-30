@@ -10,11 +10,8 @@ public struct DefaultImageProvider: ImageProvider {
                 Color.clear
                     .frame(width: 0, height: 0)
             case .success(let image, let idealSize):
-                ResizeToFit(idealSize: idealSize) {
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 150)
+                ResizeToFit(idealSize: CGSize(width: 150, height: 300)) {
+                    image.resizable()
                 }
             }
         }
