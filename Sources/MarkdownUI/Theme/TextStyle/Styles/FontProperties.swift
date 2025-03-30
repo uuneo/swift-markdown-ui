@@ -1,9 +1,9 @@
 import SwiftUI
 
 /// The characteristics of a font.
-public struct FontProperties: Hashable {
+public struct FontProperties: Hashable, Sendable {
   /// The font family.
-  public enum Family: Hashable {
+    public enum Family: Hashable,Sendable {
     /// The system font family.
     case system(Font.Design = .default)
 
@@ -21,7 +21,7 @@ public struct FontProperties: Hashable {
   }
 
   /// The font caps variant.
-  public enum CapsVariant: Hashable {
+    public enum CapsVariant: Hashable,Sendable {
     /// Don't use a font caps variant.
     case normal
 
@@ -36,7 +36,7 @@ public struct FontProperties: Hashable {
   }
 
   /// The font digit variant.
-  public enum DigitVariant: Hashable {
+  public enum DigitVariant: Hashable, Sendable  {
     /// Don't use a font digit variant.
     case normal
 
@@ -45,7 +45,7 @@ public struct FontProperties: Hashable {
   }
 
   /// The font style.
-  public enum Style {
+    public enum Style: Sendable  {
     /// Don't use a font style.
     case normal
 

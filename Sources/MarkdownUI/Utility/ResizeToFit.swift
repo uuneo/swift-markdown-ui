@@ -10,12 +10,11 @@ struct ResizeToFit<Content>: View where Content: View {
   }
 
   var body: some View {
-//    if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
-//      ResizeToFit2 { self.content }
-//    } else {
-//      ResizeToFit1(idealSize: self.idealSize, content: self.content)
-//    }
+    if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *) {
+      ResizeToFit2 { self.content }
+    } else {
       ResizeToFit1(idealSize: self.idealSize, content: self.content)
+    }
   }
 }
 
