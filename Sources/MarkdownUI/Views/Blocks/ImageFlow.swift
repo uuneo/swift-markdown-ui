@@ -23,7 +23,6 @@ struct ImageFlow: View {
           }
         }
       }
-      .frame(width: 300)
     }
   }
 }

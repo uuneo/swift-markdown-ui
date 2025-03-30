@@ -11,7 +11,8 @@ public struct DefaultImageProvider: ImageProvider {
                     .frame(width: 0, height: 0)
             case .success(let image, let idealSize):
                 ResizeToFit(idealSize: idealSize) {
-                    image.resizable()
+                    image
+                        .resizable()
                 }
             }
         }

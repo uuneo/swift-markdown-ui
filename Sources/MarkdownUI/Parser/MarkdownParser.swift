@@ -20,7 +20,9 @@ extension Array where Element == BlockNode {
     UnsafeNode.makeDocument(self) { document in
       String(cString: cmark_render_plaintext(document, CMARK_OPT_DEFAULT, 0))
     } ?? ""
+      
   }
+    
 
   func renderHTML() -> String {
     UnsafeNode.makeDocument(self) { document in

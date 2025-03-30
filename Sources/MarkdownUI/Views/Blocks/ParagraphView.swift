@@ -27,12 +27,17 @@ struct ParagraphView: View {
   }
 
   @ViewBuilder private var label: some View {
-    if let imageView = ImageView(content) {
-      imageView
-    } else if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *),
+      
+//      if let imageView = ImageView(content) {
+//        imageView
+//      } else
+      
+    if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *),
       let imageFlow = ImageFlow(content)
     {
       imageFlow
+            .frame(width: 100, height: 100)
+            .clipped()
     } else {
       InlineText(content)
     }
