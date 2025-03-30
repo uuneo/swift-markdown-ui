@@ -26,8 +26,6 @@ struct ImageView: View {
     self.imageProvider.makeImage(url: self.url)
       .link(destination: self.data.destination)
       .accessibilityLabel(self.data.alt)
-      .scaledToFit()
-      .frame(width: 150)
   }
 
   private var content: BlockNode {
