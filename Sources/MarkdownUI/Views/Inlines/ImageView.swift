@@ -18,6 +18,9 @@ struct ImageView: View {
         content: .init(block: self.content)
       )
     )
+    .onAppear{
+        debugPrint("加载图片中...")
+    }
     
     
   }
