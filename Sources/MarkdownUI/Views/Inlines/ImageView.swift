@@ -9,6 +9,7 @@ struct ImageView: View {
 
   init(data: RawImageData) {
     self.data = data
+     
   }
 
   var body: some View {
@@ -18,10 +19,6 @@ struct ImageView: View {
         content: .init(block: self.content)
       )
     )
-    .onAppear{
-        debugPrint("加载图片中...")
-    }
-    
     
   }
 
