@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ImageView: View {
   @Environment(\.theme.image) private var image
   @Environment(\.imageProvider) private var imageProvider
@@ -50,6 +51,7 @@ struct ImageView: View {
   }
 }
 
+@available(iOS 15.0, *)
 extension ImageView {
   init?(_ inlines: [InlineNode]) {
     guard inlines.count == 1, let data = inlines.first?.imageData else {
@@ -59,12 +61,14 @@ extension ImageView {
   }
 }
 
+@available(iOS 15.0, *)
 extension View {
   fileprivate func link(destination: String?) -> some View {
     self.modifier(LinkModifier(destination: destination))
   }
 }
 
+@available(iOS 15.0, *)
 private struct LinkModifier: ViewModifier {
   @Environment(\.baseURL) private var baseURL
   @Environment(\.openURL) private var openURL

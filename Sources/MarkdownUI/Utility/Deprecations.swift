@@ -1,14 +1,14 @@
 import SwiftUI
 
 // MARK: - Deprecated after 2.1.0:
-
+@available(iOS 15.0, *)
 extension DefaultImageProvider {
   @available(*, deprecated, message: "Use the 'default' static property")
   public init(urlSession: URLSession = .shared) {
     self.init()
   }
 }
-
+@available(iOS 15.0, *)
 extension DefaultInlineImageProvider {
   @available(*, deprecated, message: "Use the 'default' static property")
   public init(urlSession: URLSession = .shared) {
@@ -17,7 +17,7 @@ extension DefaultInlineImageProvider {
 }
 
 // MARK: - Deprecated after 2.0.2:
-
+@available(iOS 15.0, *)
 extension BlockStyle where Configuration == BlockConfiguration {
   @available(
     *,
@@ -41,7 +41,7 @@ extension BlockStyle where Configuration == BlockConfiguration {
     self.init { $0 }
   }
 }
-
+@available(iOS 15.0, *)
 extension View {
   @available(
     *,
@@ -78,7 +78,7 @@ extension View {
     )
   }
 }
-
+@available(iOS 15.0, *)
 extension Theme {
   @available(
     *,
@@ -332,7 +332,7 @@ public struct MarkdownImageHandler {
     fatalError("Unimplemented")
   }
 }
-
+@available(iOS 15.0, *)
 extension Markdown {
   @available(
     *,
@@ -369,6 +369,7 @@ extension View {
     "BlockStyle" types.
     """
 )
+@available(iOS 15.0, *)
 public struct MarkdownStyle: Hashable {
   public struct Font: Hashable {
     public static var largeTitle: Self { fatalError("Unimplemented") }
@@ -479,6 +480,7 @@ public struct MarkdownStyle: Hashable {
   }
 }
 
+@available(iOS 15.0, *)
 extension View {
   @available(
     *,
