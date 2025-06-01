@@ -3,10 +3,10 @@
     {
       "identity" : "networkimage",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gonzalezreal/NetworkImage",
+      "location" : "https://github.com/uuneo/NetworkImage",
       "state" : {
-        "revision" : "7aff8d1b31148d32c5933d75557d42f6323ee3d1",
-        "version" : "6.0.0"
+        "branch" : "IOS13",
+        "revision" : "e1fb6440045a06231b71f743c48f68326fa1bbbf"
       }
     },
     {
