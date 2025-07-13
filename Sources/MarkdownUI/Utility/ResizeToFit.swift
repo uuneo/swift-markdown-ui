@@ -4,7 +4,7 @@ public struct ResizeToFit<Content>: View where Content: View {
     private let idealSize: CGSize
     private let content: Content
     
-    init(idealSize: CGSize, @ViewBuilder content: () -> Content) {
+    public init(idealSize: CGSize, @ViewBuilder content: () -> Content) {
         self.idealSize = idealSize
         self.content = content()
     }
